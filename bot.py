@@ -20,7 +20,7 @@ from storage import MessageStore
 BASE_DIR = Path(__file__).resolve().parent
 load_dotenv(BASE_DIR / ".env")
 
-OWNER_ID = 5792274744
+OWNER_ID = int(os.getenv("OWNER_ID", "5792274744"))
 DATABASE_PATH = BASE_DIR / "bot.db"
 
 router = Router()

@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  whisperbox:
+    build: .
+    container_name: whisperbox-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./bot.db:/app/bot.db
